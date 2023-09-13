@@ -1,0 +1,124 @@
+# Introduction to Business Analytics
+
+------------------------------------------------------------------------
+
+## Weekly Overview
+
+By the end of each week, you will be able to do the following:
+
+### Week 1: Introduction to Business Analytics
+
+Define "analytics" and "insights" as they relate to business analytics.
+
+Compare business analysis, business analytics, and data analytics.
+
+Define the role, responsibilities, and skills of a business analyst.
+
+Identify the foundational steps of the business analysis process.
+
+### Week 2: Data Analytics Lifecycle
+
+Explain the importance of analytics and insights for a business.
+
+Identify the four types of analytics that businesses use: descriptive, diagnostic, predictive, and prescriptive.
+
+Define the data analytics lifecycle as the process to define how data is created, collected, manipulated, and analyzed for business goals.
+
+Describe the data analytics lifecycle framework.
+
+### Week 3: Project Management for Analytics
+
+Compare the skills and job responsibilities of a project manager and business analyst.
+
+Identify foundational project management topics and skills used by a business analyst.
+
+### Week 4: Data Literacy
+
+Understand the importance of being data literate as a business analyst.
+
+Develop your data literacy through the external Data Literacy for All course from Tableau.
+
+------------------------------------------------------------------------
+
+## Certificate Overview
+
+| Course | Topic                          | Field                                                   |
+|:-----------------|:-----------------------|:-----------------------------|
+| 1      | Overview of business analytics | Business analytics / business analysis / data analytics |
+| 2      | The business analysis process  | Business analysis                                       |
+| 3      | The data ecosystem             | Data analytics                                          |
+| 4      | Getting started with Tableau   | Data analytics                                          |
+| 5      | Data visualizations            | Data analytics                                          |
+| 6      | Advanced data visualizations   | Data analytics                                          |
+| 7      | Analyzing data                 | Data analytics                                          |
+| 8      | Communicating insights         | Business analytics                                      |
+
+------------------------------------------------------------------------
+
+## Data \> Analytics \> Insights
+
+Data is a collection of information that can be manipulated, organized, and processed.
+
+Analytics is the process of discovering and interpreting meaning from data.
+
+Insights: The goal of analytics is to discover patterns and trends that businesses can use to take informed actions. The actionable trends and patterns uncovered through analysis are called insights.
+
+------------------------------------------------------------------------
+
+## What Is a Business Intelligence Analyst?
+
+Business analytics is performed by business intelligence (BI) analysts. BI analysts use data and statistical analysis to help companies make better business decisions. They collect, process, and analyze data from various sources, such as market research, sales figures, and financial reports. They then use this information to identify trends, patterns, and opportunities, and they present their findings to management and other stakeholders in the form of reports, dashboards, and visualizations. BI analysts may also be involved in the design and implementation of tools and dashboards to support decision-making processes, utilizing business analytics software like Tableau.
+
+Below is a list of common responsibilities for BI analysts:
+
+-   Exploring and investigating past business performance data to produce insights and drive strategic planning for the business.
+
+-   Using data to analyze business problems and suggest solutions.
+
+-   Developing and managing business intelligence solutions for the organization.
+
+-   Visualizing key data and key performance indicators (KPIs) to inform business decisions.
+
+-   Designing, developing, testing, and deploying dashboards.
+
+-   Creating simple-to-complex SQL (structured query language) queries to extract and analyze data.
+
+-   Applying research and evaluation standards, descriptive statistics, and data management principles to translate complex data into meaningful content.
+
+-   Designing, creating, testing, and maintaining a portfolio of reports, scorecards, databases, and dashboard solutions.
+
+-   Delivering, reviewing, and distributing reports.
+
+------------------------------------------------------------------------
+
+## Business Analysis vs. Business Analytics
+
+In short:
+
+**Business Analysis** handles analysis of primarily written materials and hands-on review of boots-on-the-ground stuff: policies, procedures, processes, gap analysis, regulatory and legal analysis, and "the way things are done". Very related to compliance.
+
+The **Business Analyst** is going to do a lot of reading, listening to recorded calls, and interviewing or shadowing front-line staff.
+
+### vs
+
+**Business Analytics** handles data: databases, graphs, charts, calculations, statistics, etc. WHile these data may inform the business analysis, they are not the same job. The
+
+**Business Intelligence Analyst** is going to spend most their time either in planning meetings or in database deep dives (SQL, Tableau, etc.)
+
+------------------------------------------------------------------------
+
+## Business Analytics vs. Data Analytics
+
+**Business analytics** focuses on the larger business implications of data and the actions that should result from them, such as whether a company should develop a new product line or prioritize one project over another. The term business analytics refers to a combination of skills, tools, and applications that allows businesses to measure and improve the effectiveness of core business functions such as marketing, customer service, sales, or IT.
+
+**Data analytics** involves combing through massive datasets to reveal patterns and trends, draw conclusions about hypotheses, and support business decisions with data-based insights. Data analysis attempts to answer questions such as, "What is the influence of geography or seasonal factors on customer preferences?" or "What is the likelihood a customer will defect to a competitor?". The practice of data analytics encompasses many diverse techniques and approaches and is also frequently referred to as data science, data mining, data modeling, or big data analytics.
+
+[Business Analytics vs. Data Analytics](https://www.talend.com/resources/business-analytics-vs-data-analytics/ "Article: Business Analytics vs. Data Analytics")
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+Ze Eynd .
