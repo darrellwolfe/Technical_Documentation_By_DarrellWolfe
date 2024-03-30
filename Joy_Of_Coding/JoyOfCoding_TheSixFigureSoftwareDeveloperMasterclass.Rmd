@@ -1,0 +1,345 @@
+
+---
+Title: Joy of Coding
+Subtitle: The Six Figure Software Developer Masterclass
+Author: Dr. Emily Hill, PhD
+---
+
+# Meet Your Software Developer Mentor:
+
+## Dr. Emily Hill, PhD
+
+Dr. Emily is a software engineering trainer and a tenured professor with 3 computer science degrees. After 10 years of watching universities and coding bootcamps fail to prepare their students for software engineering jobs, Dr. Emily made it her mission to train aspiring software developers.
+
+Thanks to Dr. Emily’s breakthrough teaching methods, hundreds of her students learn to build software faster and land six-figure developer jobs at Tech Startups and industry giants like Amazon and Chase.
+
+https://joyofcoding.academy/
+
+
+
+# What are the seven basics of coding?
+
+1. Variables
+2. Math & Logic
+3. Input/Output
+4. Conditions
+5. Loops
+6. Functions
+7. Sequences & Data Structures
+
+These 7 concepts can be combined in infinitely many ways. Once mastered, you can implement any program that's ever been written, in any programming language. 
+
+
+## Defining the seven basics
+
+Variables: Storage locations in code that hold data which can be changed during program execution. They are named so programmers can easily identify and manipulate their values.
+
+Math & Logic: The mathematical operations (such as addition, subtraction, multiplication, division) and logical operations (like AND, OR, NOT) that allow manipulation of variables and control the flow of the program based on conditions.
+
+Input/Output: The mechanism by which a program receives data from the outside world (input), processes it, and then sends data back to the outside world (output). Examples include reading user input from a keyboard and displaying messages on a screen.
+
+Conditions: Statements in code that execute different actions based on whether a specified condition is true or false. They are fundamental for decision-making in programming.
+
+Loops: Constructs that repeat a block of code multiple times until a certain condition is met. They are used to automate repetitive tasks.
+
+Functions: Named blocks of code designed to perform a specific task. Functions can take inputs, process them, and return a result. They help in making code reusable and organized.
+
+Sequences & Data Structures: Organized collections of data that can be manipulated efficiently. Sequences refer to ordered collections where each item has a specific position, while data structures are more complex organizations of data for efficient access and modification (e.g., arrays, lists, trees, and graphs).
+
+
+
+# You can have any genius zone
+
+Rails is a platform that runs Ruby (a language) that can run on websites, and it runs 4 million websites.
+
+The creator was an English major, and he approached it like English. 
+
+Mozart created great music, but we can love other musicians. 
+
+# Start learning the seven basics with python
+
+## Introduction to concepts of syntax
+
+```{python}
+print("Hello!")
+
+```
+If you want to use the web browser: 
+https://trinket.io/turtle
+
+Print: Function Name
+
+Parenthesis: Function Parameters
+
+Text is in quotes "" and ''
+
+Output: Hello!
+
+```{python}
+print("Challenge #", 2 + 3 )
+
+# "Challenge # <- First Parameter
+# , seperator
+# 2 + 3 <- Second Parameter
+
+```
+
+# Variables
+
+## Assignment statement
+
+x = 4
+
+Officially called left hand side (lhs) and right hand side (rhs).
+
+lhs = rhs
+
+This is telling you what x is, not asking you "is x equal to 4?" that would be a different syntax. In Python, this is two equal signs ==.
+
+## Alternate vocabulary
+
+Variable Declaration
+Variable Definition
+Variable Initialization
+
+Variable Name | Variable Value
+x             |  4
+
+## Examples of variables
+
+x = 4
+y = 2 + 3
+z = x + y
+x = 0
+z + = 1
+If z=9, then the result would be 10 (z = z + 1)
+
+
+```{python eval=FALSE, include=TRUE}
+import turtle
+
+turtle.color("red")
+turtle.forward(50)
+turtle.right(120)
+turtle.forward(50)
+turtle.right(120)
+turtle.forward(50)
+
+
+```
+
+
+
+
+
+```{python eval=FALSE, include=TRUE}
+import turtle
+
+turtle.color("red")
+turtle.forward(50)
+turtle.left(120)
+turtle.forward(50)
+turtle.left(120)
+turtle.forward(50)
+
+```
+
+
+
+
+```{python eval=FALSE, include=TRUE}
+
+import turtle
+# side = 50
+side = 100
+turtle.color("red")
+turtle.forward(side)
+turtle.left(120)
+turtle.forward(side)
+turtle.left(120)
+turtle.forward(side)
+
+```
+
+
+### Use variables to make your codes "dry"
+
+```{python}
+print(1)
+print(2)
+print(3)
+print(4)
+print(5)
+print(6)
+print(7)
+print(8)
+print(9)
+print(10)
+
+
+
+
+
+```
+
+# Loop Variables
+for <loop variable> in <sequence>: #Do the repeated code
+
+(start,stop, step)
+
+
+```{python}
+for i in range(1,11)
+
+print(i)
+```
+
+
+
+```{python}
+for char in "hello"
+print(char)
+
+```
+
+
+
+```{python eval=FALSE, include=TRUE}
+import turtle
+# side = 50
+side = 100
+turtle.color("red")
+turtle.forward(side)
+turtle.left(120)
+turtle.forward(side)
+turtle.left(120)
+turtle.forward(side)
+```
+
+You can have a variable "i" without using it, because the loop will still run the following code.
+
+```{python eval=FALSE, include=TRUE}
+import turtle
+
+turtle.color("red")
+side = 100
+
+for i in range(3):
+  turtle.forward(side)
+  turtle.left(120)
+  
+```
+
+
+```{python eval=FALSE, include=TRUE}
+
+import turtle
+
+turtle.color("red")
+side = 100
+
+for i in range(3):
+  turtle.forward(side)
+  turtle.left(120)
+
+turtle.color("blue")
+side = 50
+
+for i in range(3):
+  turtle.forward(side)
+  turtle.left(120)
+  
+  
+```
+
+
+
+```{python}
+
+```
+
+
+
+```{python}
+
+```
+
+
+
+```{python}
+
+```
+
+
+
+```{python}
+
+```
+
+
+
+```{python}
+
+```
+
+
+
+```{python}
+
+```
+
+
+```{python}
+
+```
+
+
+```{python}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
