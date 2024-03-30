@@ -354,14 +354,18 @@ display: none;
 
 <div id="meet-your-software-developer-mentor" class="section level1">
 <h1>Meet Your Software Developer Mentor:</h1>
-<p>Dr. Emily Hill, PhD Dr. Emily is a software engineering trainer and a
-tenured professor with 3 computer science degrees. After 10 years of
-watching universities and coding bootcamps fail to prepare their
-students for software engineering jobs, Dr. Emily made it her mission to
-train aspiring software developers.</p>
+<div id="dr.-emily-hill-phd" class="section level2">
+<h2>Dr. Emily Hill, PhD</h2>
+<p>Dr. Emily is a software engineering trainer and a tenured professor
+with 3 computer science degrees. After 10 years of watching universities
+and coding bootcamps fail to prepare their students for software
+engineering jobs, Dr. Emily made it her mission to train aspiring
+software developers.</p>
 <p>Thanks to Dr. Emily’s breakthrough teaching methods, hundreds of her
 students learn to build software faster and land six-figure developer
 jobs at Tech Startups and industry giants like Amazon and Chase.</p>
+<p><a href="https://joyofcoding.academy/" class="uri">https://joyofcoding.academy/</a></p>
+</div>
 </div>
 <div id="what-are-the-seven-basics-of-coding" class="section level1">
 <h1>What are the seven basics of coding?</h1>
@@ -447,6 +451,183 @@ would be a different syntax. In Python, this is two equal signs ==.</p>
 <h2>Alternate vocabulary</h2>
 <p>Variable Declaration Variable Definition Variable Initialization</p>
 <p>Variable Name | Variable Value x | 4</p>
+</div>
+<div id="examples-of-variables" class="section level2">
+<h2>Examples of variables</h2>
+<p>x = 4</p>
+<p>y = 2 + 3</p>
+<p>z = x + y</p>
+<p>x = 0</p>
+<p>z + = 1</p>
+<p>If z=9, then the result would be 10 (z = z + 1)</p>
+<pre class="python"><code>import turtle
+
+turtle.color(&quot;red&quot;)
+turtle.forward(50)
+turtle.right(120)
+turtle.forward(50)
+turtle.right(120)
+turtle.forward(50)</code></pre>
+<pre class="python"><code>import turtle
+
+turtle.color(&quot;red&quot;)
+turtle.forward(50)
+turtle.left(120)
+turtle.forward(50)
+turtle.left(120)
+turtle.forward(50)</code></pre>
+<pre class="python"><code>import turtle
+# side = 50
+side = 100
+turtle.color(&quot;red&quot;)
+turtle.forward(side)
+turtle.left(120)
+turtle.forward(side)
+turtle.left(120)
+turtle.forward(side)</code></pre>
+<div id="use-variables-to-make-your-codes-dry" class="section level3">
+<h3>Use variables to make your codes “dry”</h3>
+<pre class="python"><code>print(1)
+print(2)
+print(3)
+print(4)
+print(5)
+print(6)
+print(7)
+print(8)
+print(9)
+print(10)</code></pre>
+</div>
+</div>
+</div>
+<div id="loop-variables" class="section level1">
+<h1>Loop Variables</h1>
+<p>for <loop variable> in <sequence>: #Do the repeated code</p>
+<p>(start,stop, step)</p>
+<pre class="python"><code>for i in range(1,11)
+
+print(i)</code></pre>
+<pre class="python"><code>for char in &quot;hello&quot;
+print(char)</code></pre>
+<pre class="python"><code>import turtle
+# side = 50
+side = 100
+turtle.color(&quot;red&quot;)
+turtle.forward(side)
+turtle.left(120)
+turtle.forward(side)
+turtle.left(120)
+turtle.forward(side)</code></pre>
+<p>You can have a variable “i” without using it, because the loop will
+still run the following code.</p>
+<pre class="python"><code>import turtle
+
+turtle.color(&quot;red&quot;)
+side = 100
+
+for i in range(3):
+  turtle.forward(side)
+  turtle.left(120)</code></pre>
+<pre class="python"><code>import turtle
+
+turtle.color(&quot;red&quot;)
+side = 100
+
+for i in range(3):
+  turtle.forward(side)
+  turtle.left(120)
+
+turtle.color(&quot;blue&quot;)
+side = 50
+
+for i in range(3):
+  turtle.forward(side)
+  turtle.left(120)</code></pre>
+</div>
+<div id="functions" class="section level1">
+<h1>Functions</h1>
+<ul>
+<li><p>Named group of code statements</p>
+<ul>
+<li>Makes your program easier to read, test, and debug</li>
+</ul></li>
+<li><p>Simplify testing &amp; debugging</p>
+<ul>
+<li>Test &amp; debug simpler individual functions one at a tie before
+testing your program is working as a whole</li>
+</ul></li>
+<li><p>Reuse!</p>
+<ul>
+<li>Once written &amp; debugged, can be reused</li>
+</ul></li>
+</ul>
+<pre class="python"><code>def add(x, y):
+  print(&quot;I will add the numbers %d and %d&quot; % (x, y))
+  return x + y;
+
+sum = add(5, 7)</code></pre>
+<pre><code>## I will add the numbers 5 and 7</code></pre>
+<pre class="python"><code>print(&quot;=&quot;, sum)</code></pre>
+<pre><code>## = 12</code></pre>
+</div>
+<div id="function-writing-template" class="section level1">
+<h1>Function Writing Template</h1>
+<p>def function_name(parameter_names): # function body</p>
+<ul>
+<li>Step 1 Write the code for one example and test</li>
+<li>Step 2 Replace any repeated or changing values with variables</li>
+<li>Step 3 identify parameters (which variables will change every
+call)</li>
+<li>Step 4 Write the function signature (nae &amp; parameters)</li>
+<li>Step 5 Write function body (sub parameter names for variables)</li>
+<li>Step 6 Test</li>
+<li>Step 7 Test alternatives</li>
+</ul>
+<div id="example-function" class="section level2">
+<h2>Example Function</h2>
+<pre class="python"><code>import turtle
+
+turtle.color(&quot;red&quot;)
+side = 100
+
+#Repeat 3 times
+for i in range(3):
+  turtle.forward(side)
+  turtle.left(120)</code></pre>
+<pre class="python"><code>import turtle
+
+turtle.color(&quot;red&quot;)
+## size = 100
+
+def triangle(size):
+  #Repeat 3 times
+  for i in range(3):
+    turtle.forward(size)
+    turtle.left(120)
+    
+triangle(100)</code></pre>
+<pre class="python"><code>import turtle
+
+turtle.color(&quot;red&quot;)
+## size = 100
+
+def back(len):
+  turtle.penup()
+  turtle.backward()
+  turtle.pendown()
+
+
+def triangle(size):
+  #Repeat 3 times
+  for i in range(3):
+    turtle.forward(size)
+    turtle.left(120)
+    
+triangle(100)
+back(75)
+triangle(50)
+back(50)
+triangle(25)</code></pre>
 </div>
 </div>
 

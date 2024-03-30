@@ -1,4 +1,3 @@
-
 ---
 Title: Joy of Coding
 Subtitle: The Six Figure Software Developer Masterclass
@@ -11,24 +10,21 @@ Author: Dr. Emily Hill, PhD
 
 Dr. Emily is a software engineering trainer and a tenured professor with 3 computer science degrees. After 10 years of watching universities and coding bootcamps fail to prepare their students for software engineering jobs, Dr. Emily made it her mission to train aspiring software developers.
 
-Thanks to Dr. Emily’s breakthrough teaching methods, hundreds of her students learn to build software faster and land six-figure developer jobs at Tech Startups and industry giants like Amazon and Chase.
+Thanks to Dr. Emily's breakthrough teaching methods, hundreds of her students learn to build software faster and land six-figure developer jobs at Tech Startups and industry giants like Amazon and Chase.
 
-https://joyofcoding.academy/
-
-
+<https://joyofcoding.academy/>
 
 # What are the seven basics of coding?
 
-1. Variables
-2. Math & Logic
-3. Input/Output
-4. Conditions
-5. Loops
-6. Functions
-7. Sequences & Data Structures
+1.  Variables
+2.  Math & Logic
+3.  Input/Output
+4.  Conditions
+5.  Loops
+6.  Functions
+7.  Sequences & Data Structures
 
-These 7 concepts can be combined in infinitely many ways. Once mastered, you can implement any program that's ever been written, in any programming language. 
-
+These 7 concepts can be combined in infinitely many ways. Once mastered, you can implement any program that's ever been written, in any programming language.
 
 ## Defining the seven basics
 
@@ -46,15 +42,13 @@ Functions: Named blocks of code designed to perform a specific task. Functions c
 
 Sequences & Data Structures: Organized collections of data that can be manipulated efficiently. Sequences refer to ordered collections where each item has a specific position, while data structures are more complex organizations of data for efficient access and modification (e.g., arrays, lists, trees, and graphs).
 
-
-
 # You can have any genius zone
 
 Rails is a platform that runs Ruby (a language) that can run on websites, and it runs 4 million websites.
 
-The creator was an English major, and he approached it like English. 
+The creator was an English major, and he approached it like English.
 
-Mozart created great music, but we can love other musicians. 
+Mozart created great music, but we can love other musicians.
 
 # Start learning the seven basics with python
 
@@ -64,8 +58,8 @@ Mozart created great music, but we can love other musicians.
 print("Hello!")
 
 ```
-If you want to use the web browser: 
-https://trinket.io/turtle
+
+If you want to use the web browser: <https://trinket.io/turtle>
 
 Print: Function Name
 
@@ -98,23 +92,24 @@ This is telling you what x is, not asking you "is x equal to 4?" that would be a
 
 ## Alternate vocabulary
 
-Variable Declaration
-Variable Definition
-Variable Initialization
+Variable Declaration Variable Definition Variable Initialization
 
-Variable Name | Variable Value
-x             |  4
+Variable Name \| Variable Value x \| 4
 
 ## Examples of variables
 
 x = 4
+
 y = 2 + 3
+
 z = x + y
+
 x = 0
+
 z + = 1
+
 If z=9, then the result would be 10 (z = z + 1)
 
-
 ```{python eval=FALSE, include=TRUE}
 import turtle
 
@@ -128,10 +123,6 @@ turtle.forward(50)
 
 ```
 
-
-
-
-
 ```{python eval=FALSE, include=TRUE}
 import turtle
 
@@ -143,9 +134,6 @@ turtle.left(120)
 turtle.forward(50)
 
 ```
-
-
-
 
 ```{python eval=FALSE, include=TRUE}
 
@@ -161,10 +149,9 @@ turtle.forward(side)
 
 ```
 
-
 ### Use variables to make your codes "dry"
 
-```{python}
+```{python eval=FALSE, include=TRUE}
 print(1)
 print(2)
 print(3)
@@ -183,26 +170,22 @@ print(10)
 ```
 
 # Loop Variables
+
 for <loop variable> in <sequence>: #Do the repeated code
 
 (start,stop, step)
 
-
-```{python}
+```{python eval=FALSE, include=TRUE}
 for i in range(1,11)
 
 print(i)
 ```
 
-
-
-```{python}
+```{python eval=FALSE, include=TRUE}
 for char in "hello"
 print(char)
 
 ```
-
-
 
 ```{python eval=FALSE, include=TRUE}
 import turtle
@@ -230,7 +213,6 @@ for i in range(3):
   
 ```
 
-
 ```{python eval=FALSE, include=TRUE}
 
 import turtle
@@ -252,94 +234,225 @@ for i in range(3):
   
 ```
 
+# Functions
+
+-   Named group of code statements
+
+    -   Makes your program easier to read, test, and debug
+
+-   Simplify testing & debugging
+
+    -   Test & debug simpler individual functions one at a tie before testing your program is working as a whole
+
+-   Reuse!
+
+    -   Once written & debugged, can be reused
+
+```{python}
+
+def add(x, y):
+  print("I will add the numbers %d and %d" % (x, y))
+  return x + y;
+
+sum = add(5, 7)
+print("=", sum)
+
+
+
+```
+
+# Function Writing Template
+
+def function_name(parameter_names):
+  # function body
+
+-   Step 1 Write the code for one example and test
+-   Step 2 Replace any repeated or changing values with variables
+-   Step 3 identify parameters (which variables will change every call)
+-   Step 4 Write the function signature (nae & parameters)
+-   Step 5 Write function body (sub parameter names for variables)
+-   Step 6 Test
+-   Step 7 Test alternatives 
+
+## Example Function
+
+```{python eval=FALSE, include=TRUE}
+
+import turtle
+
+turtle.color("red")
+side = 100
+
+#Repeat 3 times
+for i in range(3):
+  turtle.forward(side)
+  turtle.left(120)
+
+```
+
+
+
+```{python eval=FALSE, include=TRUE}
+import turtle
+
+turtle.color("red")
+## size = 100
+
+def triangle(size):
+  #Repeat 3 times
+  for i in range(3):
+    turtle.forward(size)
+    turtle.left(120)
+    
+triangle(100)
+
+```
+
+```{python eval=FALSE, include=TRUE}
+import turtle
+
+turtle.color("red")
+## size = 100
+
+def back(len):
+  turtle.penup()
+  turtle.backward()
+  turtle.pendown()
+
+
+def triangle(size):
+  #Repeat 3 times
+  for i in range(3):
+    turtle.forward(size)
+    turtle.left(120)
+    
+triangle(100)
+back(75)
+triangle(50)
+back(50)
+triangle(25)
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ```{python}
 
 ```
 
+```{python eval=FALSE, include=TRUE}
 
+```
 
 ```{python}
 
 ```
 
+```{python eval=FALSE, include=TRUE}
 
+```
 
 ```{python}
 
 ```
 
+```{python eval=FALSE, include=TRUE}
 
+```
 
 ```{python}
 
 ```
 
+```{python eval=FALSE, include=TRUE}
 
+```
 
 ```{python}
 
 ```
 
+```{python eval=FALSE, include=TRUE}
 
+```
 
 ```{python}
 
 ```
 
+```{python eval=FALSE, include=TRUE}
+
+```
 
 ```{python}
 
 ```
 
+```{python eval=FALSE, include=TRUE}
+
+```
 
 ```{python}
 
 ```
 
+```{python eval=FALSE, include=TRUE}
 
+```
 
+```{python}
 
+```
 
+```{python eval=FALSE, include=TRUE}
 
+```
 
+```{python}
 
+```
 
+```{python eval=FALSE, include=TRUE}
 
+```
 
+```{python}
 
+```
 
+```{python eval=FALSE, include=TRUE}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
