@@ -346,6 +346,9 @@ One awesome tool that will let you actually use SQL is Google's [BigQuery (link)
 
 From their website: "BigQuery's serverless architecture lets you use SQL queries to analyze your data. You can store and analyze your data within BigQuery or use BigQuery to assess your data where it lives. To test how it works for yourself, query data---without a credit card---using the BigQuery sandbox."
 
+BigQuery Overview: https://cloud.google.com/bigquery/docs/introduction
+
+
 ## ---------------------------------------------------------------
 
 ------------------------------------------------------------------------
