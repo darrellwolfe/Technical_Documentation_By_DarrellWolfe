@@ -1,0 +1,1076 @@
+---
+title: "Learning Coding Fundamentals with Python and SQL"
+author: "Darrell Wolfe"
+start_date: "March 30, 2024"
+end_date: "`r Sys.Date()`"
+output: html_document
+---
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Disclaimers First
+
+It is not my intention to steal anyone's thunder or copyrighted material. I do not believe these seven fundamentals are specific to Dr Hill (below), who was the initial inspiration to start this note file. That beings said, she has a particularly unique method of teaching, and I strongly recommend that if you are someone who needs a good teacher, she's the one!
+
+This is my own process of learning. I take information from as many sources and teachers as possible, synthesis that material, and then practice it until I get good at it. Further, I like to take detailed notes so I can refer back to them when a particular tool starts getting rusty or dusty in my brain after disuse for a time.
+
+When I learned .rmd through my Google Data Analytics Certification, I started incorporating that into my note taking (previously in OneNote or Notion).
+
+Therefore it is unlikely you will hear anything from today that is unique.
+
+Further, this is not intended to be a for-profit article (but if I can eventually add affiliate links I will, because who doesn't want to get paid for writing?). If I do add any links, affiliate or not, they are only those I found most helpful as I was learning and putting this together.
+
+Also, this is my own personal notes that I'm sharing, so it may change over time as I learn more.
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Prologue
+
+This project was inspired by the The Six Figure Software Developer Masterclass webinar by Dr Emily Hill, which I took (today as I write this intro) on March 30, 2024. If you get a chance to attend her webinars I highly recommend it. Hers was the only webinar I've ever found helpful and worth attending.
+
+Details: <https://joyofcoding.academy/>
+
+When I can gather the funds to attend her full bootcamp program, I will probably do so. However, my funds are too tight for the expense at this time.
+
+She mentioned that if one understands the seven basics of coding, one can build on those concepts inside any given programming language. The idea being, that if you understand these concepts, the application of the concepts will apply across languages, even if the syntax (exact wording structure) changes from language to language.
+
+I found this to be the case in my experience. I began in Excel in 2010, and over the years began mastering more and more complicated Excel formulas. In 2022-2023, I attended a course taught by David Cornell (below), where I learned Power Query, DAX modeling, and Power BI. In the following year I used ChatGPT (as a tutor, not a code writer) and W3 Schools to learn SQL. I found that SQL had extensive crossover conceptually with Excel formulas/DAX.
+
+I started Python in Coursera and discovered that the concepts crossover there too. I also had some (ancient) experience with HTML/CSS and those concepts all crossover.
+
+With the framework of thinking of coding as seven basic fundamentals (which I heard today), I think I can build on this understanding for myself. I asked ChatGPT-4 to write a course plan based on these 7 concepts, and then asked it to write the individual weeks.
+
+Starting from that skelleton, I am building this document to which I will add anything else I learn.
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Resources
+
+I want to list the tools, websites, and authors who help me as I build this document (learning as I go), so these are links to the important sites to bookmark for yourself. Incidentally, I am writing this is RStudio, in an .rmd file type with r markdown. It then exports to HTML which I will host on my site for final consumption and sharing.
+
+-   RStudio - <https://posit.co/download/rstudio-desktop/>
+-   Joy of Coding (Website) - <https://joyofcoding.academy/>
+-   Joy of Coding (YouTube) - [https://www.youtube.com/\@joyofcoding4all](https://www.youtube.com/@joyofcoding4all){.uri}
+-   ChatGPT-4 - <https://chat.openai.com/>
+-   W3 Schools (Python) - <https://www.w3schools.com/python/default.asp>
+-   W3 Schools (SQL) - <https://www.w3schools.com/sql/default.asp>
+-   W3 Schools (r) - <https://www.w3schools.com/r/default.asp>
+-   Alex the Analyst - <https://www.youtube.com/watch?v=rGx1QNdYzvs&list=PLUaB-1hjhk8FE_XZ87vPPSfHqb6OcM0cF>
+-   R Prograing 101 - R programming in one hour - a crash course for beginners - <https://www.youtube.com/watch?v=eR-XRSKsuR4>
+-   Cornell Consultants, DAVID CORNELL, MAI, CAE - <https://www.cornellconsultants.com/about.html>
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Introduction
+
+Throughout my life, I've floated from one project to another, acquiring skill and knowledge enough to feel a minimum mastery over a given topic. I get to a certain point, lose interest, and move on to the next topic. I changed my major at least five times during my six years of junior college (1998-2004). I was going to be a Theater major, but I never got around to taking a theater course after highschool. I transitioned to Music, English, History, and then IT.
+
+I dropped out to have kids, went back to school as an adult (2019-2022) and majored in Biblical Studies, while also training to become a Business Intelligence Analyst (BIA). How's that for a convoluted career path?
+
+I always called myself a "Jack of all trades", as a self effacing put down because I could never stick to one thing long enough to grow in it.
+
+Then I learned I'm Autistic and ADHD (AuDHD), and things started making a lot more sense.
+
+Then I found out that we have all been using the quote wrong.
+
+The full quote is often expressed as "A jack of all trades, master of none," though it's not the entire saying. Interestingly, the complete version ends on a more positive note:
+
+> *"A jack of all trades, master of none, but oftentimes better than a master of one."*
+
+This extended version suggests that having a wide range of skills or knowledge can be more advantageous than being an expert in just one area, highlighting the value of versatility and adaptability.
+
+With that in mind, I have asked ChatGPT-4 to write a lesson plan/course "using the seven basics as a template, create an instructional plan to teach me (1) the seven basics and (2) how these basics apply in Python and SQL."
+
+This instructional plan is designed to teach the seven basics of coding with an emphasis on applications in Python and SQL over an 8-week course. Each week focuses on different core concepts, combining theoretical background with practical exercises.
+
+By mastering these basics, and combining them with our other life experiences, we can become tailor fit solutions for the ever growing marketplace of ideas.
+
+I have a lot of financial services experience, by adding this data and programming, I can help financial services companies know their data better. Someone in medical can transition to helping medical professionals understand their patient populations or even use predictive modeling for early detection. The possible combinations of experiences and skills are endless.
+
+So when it comes to programming, what are we learning in this specific course?
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# The 7 Basics
+
+The seven fundamentals of coding --- variables, math & logic, input/output, conditions, loops, functions, and sequences & data structures --- are widely recognized concepts in the field of computer programming. They are not specific to any one individual or copyrighted material. These concepts form the core foundation of learning to code in virtually any programming language and are taught universally in computer science education and programming tutorials.
+
+# What are the seven basics of coding?
+
+1.  Variables
+2.  Math & Logic
+3.  Input/Output
+4.  Conditions
+5.  Loops
+6.  Functions
+7.  Sequences & Data Structures
+
+These seven principles offer limitless possibilities for combination. By mastering them, you gain the ability to recreate any program that exists, across all programming languages, including those that have not been invented yet.
+
+## Defining the seven basics
+
+Variables: Storage locations in code that hold data which can be changed during program execution. They are named so programmers can easily identify and manipulate their values.
+
+Math & Logic: The mathematical operations (such as addition, subtraction, multiplication, division) and logical operations (like AND, OR, NOT) that allow manipulation of variables and control the flow of the program based on conditions.
+
+Input/Output: The mechanism by which a program receives data from the outside world (input), processes it, and then sends data back to the outside world (output). Examples include reading user input from a keyboard and displaying messages on a screen.
+
+Conditions: Statements in code that execute different actions based on whether a specified condition is true or false. They are fundamental for decision-making in programming.
+
+Loops: Constructs that repeat a block of code multiple times until a certain condition is met. They are used to automate repetitive tasks.
+
+Functions: Named blocks of code designed to perform a specific task. Functions can take inputs, process them, and return a result. They help in making code reusable and organized.
+
+Sequences & Data Structures: Organized collections of data that can be manipulated efficiently. Sequences refer to ordered collections where each item has a specific position, while data structures are more complex organizations of data for efficient access and modification (e.g., arrays, lists, trees, and graphs).
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Week 1: Introduction and Variables
+
+## Objectives
+
+-   Understand variables in Python and SQL.
+-   Introduction to Python and SQL basics.
+
+## Python Section
+
+-   Introduction to Python.
+-   Working with variables: declaring, assigning values.
+-   Understanding data types and conversions.
+
+## SQL Section
+
+-   Introduction to databases and SQL.
+-   Understanding tables, fields, and variables in SQL queries.
+
+## Exercises
+
+-   Create Python scripts that use variables.
+-   Write simple SQL queries to manipulate data.
+
+# Week 2: Math & Logic
+
+## Objectives
+
+-   Learn to apply mathematical and logical operations in Python and SQL.
+
+## Python Section
+
+-   Performing arithmetic operations.
+-   Using logical operators and expressions.
+
+## SQL Section
+
+-   Arithmetic operations in SQL.
+-   Logical operators in WHERE clauses.
+
+## Exercises
+
+-   Solve math problems with Python.
+-   Filter data using arithmetic and logical operations in SQL.
+
+# Week 3: Input/Output
+
+## Objectives
+
+-   Manage I/O in Python.
+-   Data retrieval and insertion in SQL.
+
+## Python Section
+
+-   Reading and writing to files.
+-   User input and console output.
+
+## SQL Section
+
+-   Inserting and retrieving data with SQL.
+
+## Exercises
+
+-   I/O operations in Python.
+-   CRUD operations in SQL.
+
+# Week 4: Conditions
+
+## Objectives
+
+-   Use conditional statements in Python and SQL.
+
+## Python Section
+
+-   if, elif, and else statements.
+
+## SQL Section
+
+-   CASE statements and complex conditions.
+
+## Exercises
+
+-   Conditional logic in Python scripts.
+-   Conditional logic in SQL queries.
+
+# Week 5: Loops
+
+## Objectives
+
+-   Automate tasks with loops in Python. Understand loops or their alternatives in SQL.
+
+## Python Section
+
+-   for and while loops.
+
+## SQL Section
+
+-   Cursors and row-by-row operations (with caution).
+
+## Exercises
+
+-   Data processing loops in Python.
+-   Set-based operations in SQL.
+
+# Week 6: Functions
+
+## Objectives
+
+-   Modularize code with functions.
+
+## Python Section
+
+-   Defining and calling functions.
+
+## SQL Section
+
+-   Creating stored procedures and functions.
+
+## Exercises
+
+-   Function usage in Python.
+-   Stored procedures in SQL for common operations.
+
+# Week 7: Sequences & Data Structures
+
+## Objectives
+
+-   Work with data structures in Python and relational models in SQL.
+
+## Python Section
+
+-   Lists, dictionaries, and sets.
+
+## SQL Section
+
+-   Join operations and subqueries.
+
+## Exercises
+
+-   Manipulate data structures in Python.
+-   Complex SQL queries for data retrieval.
+
+# Week 8: Integration and Project Work
+
+## Objective
+
+-   Integrate learned concepts in a comprehensive project.
+
+## Project Description
+
+-   Develop a Python application that interacts with a SQL database.
+-   Incorporate variables, control structures, functions, and data structures.
+-   Perform CRUD operations in SQL from Python.
+
+# Conclusion
+
+This plan outlines a structured approach to learning programming fundamentals, tailored for practical applications in Python and SQL. By the end of this course, students will have a solid foundation in coding basics and the ability to apply these concepts in real-world scenarios.
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Week 0: Prep & Set Up
+
+Before we even begin, you are going to need some tools. I'm going to give some options.
+
+For those looking for a more entry level starter way to use this tutorial, here are some options.
+
+Most of what we are going to do, you can just use the W3 Schools code editor to accomplish:
+
+-   Python: <https://www.w3schools.com/python/trypython.asp?filename=demo_default>
+
+-   SQL: <https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all>
+
+
+
+## Alternate Options
+
+If you are advanced already, you probably already use Visual Studio or RStudio or another coding program or code book. Feel free. I prefer RStudio, as it is way more user friendly. If you want to go that route, by all means, download RSTudio: <https://posit.co/download/rstudio-desktop/>. If you go this route, make sure to install R and RStudio (see the website for details).
+
+You can also clone your GitHub repos in RStudio. We can follow each other on GitHub: 
+https://github.com/darrellwolfe
+
+
+### PYTHON
+
+Another way to code Python in-browser is
+
+Python: <https://trinket.io/turtle>
+
+Python 3: <https://trinket.io/features/python3>
+
+ANOTHER way to try Python, and a very popular option, is Jupiter Notebook: <https://jupyter.org/try-jupyter/notebooks/?path=notebooks/Intro.ipynb>
+
+### SQL
+
+Another way to code-practice SQL in-browser is:
+
+myCompiler: <https://www.mycompiler.io/new/sql>
+
+SQLite: <https://sqliteonline.com/>
+
+Also check out Codecademy <https://www.codecademy.com/article/running-sql-commands-in-db-browser>
+
+But these only really let you type code and see the colors change, it takes extra work to actually use the and see the code work.
+
+One awesome tool that will let you actually use SQL is Google's [BigQuery (link)](https://cloud.google.com/bigquery?_gl=1*w88z2n*_up*MQ..&gclid=93d8958c87b81fd32430f384585c7524&gclsrc=3p.ds#cloud-data-warehouse-to-power-your-data-driven-innovation).
+
+From their website: "BigQuery's serverless architecture lets you use SQL queries to analyze your data. You can store and analyze your data within BigQuery or use BigQuery to assess your data where it lives. To test how it works for yourself, query data---without a credit card---using the BigQuery sandbox."
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Week 1: Introduction and Variables
+
+This week, we begin our journey into the world of coding by exploring the concept of variables. We will look at how variables function in both Python and SQL, setting the foundation for more complex operations.
+
+## Section 1: Introduction to Python Variables
+
+Variables are fundamental in any programming language. They allow us to store information that can be reused throughout our programs. Let's start with Python.
+
+```{python eval=FALSE, include=TRUE}
+# Python setup for using Python in R Markdown
+import pandas as pd
+import numpy as np
+```
+
+### Declaring Variables
+
+In Python, variables do not need explicit declaration to reserve memory space. The declaration happens automatically when you assign a value to a variable.
+
+```{python eval=FALSE, include=TRUE}
+# Assigning values to variables
+x = 5
+y = "Hello, World!"
+print(x)
+print(y)
+```
+
+### Variable Types
+
+Python has various data types including integers, float (decimal numbers), strings, and more. Python's flexibility allows you to reassign variables to different data types.
+
+```{python eval=FALSE, include=TRUE}
+# Reassigning variables to different types
+x = 5.5   # x is now a float
+print(x)
+y = True  # y is now a boolean
+print(y)
+```
+
+## Section 2: Introduction to SQL Variables
+
+In SQL, variables are used differently depending on the database system. For this example, we'll use T-SQL syntax, common in Microsoft SQL Server.
+
+### Declaring Variables
+
+Variables in SQL must be declared before use. They are typically used within scripts or stored procedures.
+
+```{sql eval=FALSE, include=TRUE}
+-- Declaring a variable
+DECLARE @EmployeeID int;
+-- Assigning a value to the variable
+SET @EmployeeID = 1;
+-- Using the variable in a query
+SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;
+```
+
+### Variable Types
+
+SQL variables can be of different data types, such as INTEGER, VARCHAR (variable-length character string), and DATE. The data type of a variable dictates the kind of data it can store.
+
+```{sql eval=FALSE, include=TRUE}
+-- Declaring variables of different types
+DECLARE @StartDate DATE;
+DECLARE @EmployeeName VARCHAR(50);
+-- Assigning values
+SET @StartDate = '2021-01-01';
+SET @EmployeeName = 'John Doe';
+```
+
+## Exercises
+
+1.  In Python, create a variable to store your favorite number and print it. Write a Python function that takes a name as a parameter and prints a greeting message.
+
+2.  In SQL, declare a variable to hold a date and write a query to select records after this date from a table of your choice.
+
+## Conclusion
+
+Understanding variables is the first step in mastering programming. This week, we've seen how variables are used in both Python and SQL. Practice the exercises to reinforce what you've learned.
+
+This R Markdown document template for Week 1 introduces variables in both Python and SQL, incorporating code chunks that allow for direct execution of Python and SQL code if you're using an appropriate environment that supports these languages (note that for SQL, the environment would need to be configured to connect to a SQL database). Remember to adjust the SQL syntax according to the specific SQL dialect you're using (the example uses T-SQL as an illustration).
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Week 2: Math & Logic in Python and SQL
+
+In Week 2, we dive into math and logic operations, essential tools for any programming task. We'll explore how these operations are executed in Python and SQL, enhancing our ability to perform calculations and make decisions in our code.
+
+## Section 1: Math & Logic in Python
+
+Python provides operators to perform mathematical calculations and logical operations. Let's look at how to use these to manipulate data and control the flow of our programs.
+
+### Mathematical Operations
+
+Python supports all basic arithmetic operations. Here are some examples:
+
+```{python eval=FALSE, include=TRUE}
+# Mathematical operations in Python
+addition = 5 + 3
+subtraction = 10 - 2
+multiplication = 4 * 7
+division = 20 / 4
+modulus = 18 % 5
+print("Addition:", addition)
+print("Subtraction:", subtraction)
+print("Multiplication:", multiplication)
+print("Division:", division)
+print("Modulus:", modulus)
+```
+
+### Logical Operations
+
+Logical operations in Python are used to compare values. These operations return either True or False.
+
+```{python eval=FALSE, include=TRUE}
+# Logical operations in Python
+a = 5
+b = 3
+print("a > b:", a > b)
+print("a < b:", a < b)
+print("a == b:", a == b)
+print("a != b:", a != b)
+```
+
+## Section 2: Math & Logic in SQL
+
+SQL also allows for mathematical and logical operations, particularly useful in queries to filter, calculate, or manipulate data.
+
+### Mathematical Operations in SQL
+
+SQL supports basic arithmetic operations directly in the SELECT statement or WHERE clause.
+
+```{sql eval=FALSE, include=TRUE}
+
+-- Example of mathematical operations in SQL
+SELECT 
+  EmployeeID,
+  (YearlySalary / 12) AS MonthlySalary,
+  (YearlySalary * 1.05) AS NextYearProjectedSalary
+FROM Employees;
+
+```
+
+### Logical Operations in SQL
+
+Logical operations in SQL are primarily used in the WHERE clause to filter data based on certain conditions.
+
+```{sql eval=FALSE, include=TRUE}
+Copy code
+-- Example of logical operations in SQL
+SELECT * FROM Orders
+WHERE OrderDate >= '2022-01-01'
+AND OrderDate <= '2022-12-31';
+```
+
+### Exercises
+
+1.  In Python, create a simple calculator that takes two numbers as input and performs addition, subtraction, multiplication, and division.
+
+2.  Write a Python script that compares two variables and prints out a message based on their relation (greater than, less than, equal to).
+
+3.  In SQL, write a query to select all employees who have a yearly salary greater than \$50,000 and have been with the company for more than 5 years.
+
+### Conclusion
+
+Understanding and utilizing math and logic operations are fundamental in programming. This week, we've built on our foundational knowledge of variables by adding the ability to perform calculations and make decisions in both Python and SQL. Practice these operations to become more fluent in handling data within your programs.
+
+This document provides an introductory exploration into mathematical and logical operations in Python and SQL, suited for learners advancing from basic variables to more complex expressions and data manipulation.
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Week 3: Input/Output in Python and Data Manipulation in SQL
+
+This week, we're going to explore input/output operations in Python, allowing our programs to interact with users and files. In SQL, we'll focus on data retrieval and insertion, critical skills for working with databases.
+
+## Section 1: Input/Output in Python
+
+Python's input/output capabilities enable us to read from and write to files, as well as interact with users via input.
+
+### Reading User Input
+
+Python uses the `input()` function to capture user input. Let's see it in action.
+
+```{python eval=FALSE, include=TRUE}
+# Python code chunk for capturing user input
+user_name = input("Enter your name: ")
+print("Hello, " + user_name + "!")
+```
+
+### Reading and Writing Files
+
+Reading from and writing to files are common operations. Here's how to manage files in Python.
+
+```{python eval=FALSE, include=TRUE}
+
+# Python code chunk for reading from and writing to a file
+# Writing to a file
+with open('example.txt', 'w') as file:
+    file.write("Hello, Python file handling!")
+
+# Reading from a file
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)
+
+```
+
+## Section 2: Data Manipulation in SQL
+
+Managing data is a fundamental aspect of SQL, including retrieving, inserting, updating, and deleting records.
+
+### Retrieving Data
+
+The SELECT statement is used to query data from a database.
+
+```{sql eval=FALSE, include=TRUE}
+-- SQL code chunk for retrieving data
+SELECT FirstName, LastName FROM Employees
+WHERE DepartmentID = 3;
+
+```
+
+### Inserting Data
+
+To add new records to a table, we use the INSERT INTO statement.
+
+```{sql eval=FALSE, include=TRUE}
+-- SQL code chunk for inserting data
+INSERT INTO Employees (FirstName, LastName, DepartmentID)
+VALUES ('John', 'Doe', 3);
+
+```
+
+## Exercises
+
+1.  Write a Python program that asks the user for their favorite number, then saves this number to a file. Read the number back from the file and print it to the console.
+
+2.  Create a Python script that reads a file line by line and prints each line to the console.
+
+3.  In SQL, write a query to insert a new record into a table of your choice, then write a query to retrieve this record.
+
+## Conclusion
+
+Interacting with the outside world through input and output operations in Python and manipulating data in SQL are crucial for creating dynamic and responsive applications. Practice these skills to improve your ability to create more complex and interactive programs.
+
+This document for Week 3 introduces the learners to essential I/O operations in Python and fundamental data manipulation techniques in SQL. It provides a hands-on approach with exercises designed to reinforce the concepts discussed.
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Week 4: Conditional Statements in Python and SQL
+
+Week 4 delves into conditional statements, a critical component of programming that allows the execution of code based on specific conditions. We'll explore how to implement these logical structures in Python and SQL.
+
+## Section 1: Conditional Statements in Python
+
+Conditional statements in Python enable decision-making in programs, allowing for different outcomes based on varying conditions.
+
+### if, elif, and else Statements
+
+These statements control the flow of execution based on the truthiness of conditions.
+
+```{python eval=FALSE, include=TRUE}
+# Python code chunk for demonstrating if, elif, and else
+x = 10
+if x > 5:
+    print("x is greater than 5")
+elif x < 5:
+    print("x is less than 5")
+else:
+    print("x is exactly 5")
+```
+
+## Logical Operators
+
+Python supports logical operators such as and, or, and not for combining conditions.
+
+```{python eval=FALSE, include=TRUE}
+# Python code chunk for logical operators
+a = True
+b = False
+if a and not b:
+    print("a is True and b is False")
+
+```
+
+## Section 2: Conditional Logic in SQL
+
+In SQL, conditional logic is often applied in queries to filter data or in the use of CASE statements for more complex conditional outcomes.
+
+### Filtering with WHERE Clause
+
+The WHERE clause in SQL uses conditions to filter records.
+
+```{sql eval=FALSE, include=TRUE}
+-- SQL code chunk for filtering data with WHERE clause
+SELECT * FROM Employees
+WHERE DepartmentID = 3 AND Salary > 50000;
+
+```
+
+## Using CASE Statements
+
+The CASE statement in SQL allows for conditional logic in query results.
+
+```{sql eval=FALSE, include=TRUE}
+-- SQL code chunk for CASE statements
+SELECT EmployeeID, FirstName, LastName,
+    CASE 
+        WHEN Salary > 60000 THEN 'High'
+        WHEN Salary BETWEEN 40000 AND 60000 THEN 'Medium'
+        ELSE 'Low'
+    END AS SalaryRange
+FROM Employees;
+
+```
+
+## Exercises
+
+1.  Write a Python program that asks the user to enter a number. Use conditional statements to print whether the number is positive, negative, or zero.
+2.  Create a Python script that uses logical operators to check multiple conditions and outputs a result based on these conditions.
+3.  In SQL, write a query that uses a CASE statement to categorize employees by their salary ranges (e.g., Low, Medium, High).
+
+## Conclusion
+
+Conditional statements are fundamental to programming, enabling dynamic decision-making based on different conditions. By mastering conditionals in both Python and SQL, you can write more flexible and powerful code that responds to various scenarios effectively.
+
+This Week 4 document offers a comprehensive guide on implementing conditional logic in Python and SQL. It's designed to build on the foundational skills taught in previous weeks, gradually increasing the learner's ability to handle more complex programming tasks.
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Week 5: Mastering Loops in Python and SQL
+
+In Week 5, we delve into the concept of loops, a fundamental programming construct that allows for the execution of a block of code repeatedly based on a condition. We'll explore how to use loops in Python for various iterative tasks and introduce how similar iterative processes can be managed in SQL, focusing on set-based operations as SQL does not have traditional loop constructs like Python.
+
+## Section 1: Loops in Python
+
+Loops in Python are powerful, allowing you to iterate over items of any sequence including lists, strings, or even ranges of numbers.
+
+### for Loops
+
+The `for` loop in Python is used to iterate over elements of a sequence.
+
+```{python}
+# Python code chunk for demonstrating a for loop
+for i in range(5):
+    print("Python iteration number:", i)
+```
+
+### while Loops
+
+The while loop executes as long as the provided condition is true.
+
+```{python eval=FALSE, include=TRUE}
+# Python code chunk for demonstrating a while loop
+count = 0
+while count < 5:
+    print("While loop count:", count)
+    count += 1
+
+```
+
+## Section 2: Iterative Processing in SQL
+
+Since SQL is a set-based language, it does not use loops in the way procedural programming languages do. However, certain SQL extensions like PL/SQL or T-SQL provide loop-like constructs for complex operations.
+
+### Iterating with Cursors in SQL (Use Sparingly)
+
+Cursors can iterate over database rows, but they should be used sparingly due to performance concerns.
+
+```{sql eval=FALSE, include=TRUE}
+-- Example SQL code chunk for cursor (T-SQL syntax)
+DECLARE @EmployeeName VARCHAR(50);
+DECLARE employee_cursor CURSOR FOR
+SELECT FirstName FROM Employees;
+OPEN employee_cursor;
+FETCH NEXT FROM employee_cursor INTO @EmployeeName;
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    PRINT @EmployeeName;
+    FETCH NEXT FROM employee_cursor INTO @EmployeeName;
+END;
+CLOSE employee_cursor;
+DEALLOCATE employee_cursor;
+
+```
+
+### Preferred: Set-Based Operations
+
+SQL is designed for set-based operations, which are more efficient than row-by-row processing.
+
+```{sql eval=FALSE, include=TRUE}
+-- Example SQL code chunk for set-based operation
+SELECT FirstName, LastName FROM Employees WHERE DepartmentID = 3;
+
+```
+
+### Exercises
+
+1.  Write a Python script that uses a for loop to iterate over a list of numbers, printing each number squared.
+2.  Create a Python program that uses a while loop to ask the user for input repeatedly until they type "exit".
+3.  In SQL, if your dialect supports it, write a script using a cursor to iterate over a table and select names. Reflect on why a set-based approach might be preferred.
+
+### Conclusion
+
+Loops in Python provide a straightforward way to execute code multiple times, essential for tasks that require repetition. In SQL, while direct looping constructs exist in certain dialects, leveraging set-based operations is generally more efficient and aligns with SQL's design philosophy. Understanding these concepts will enhance your ability to automate and optimize data processing tasks in both languages.
+
+This Week 5 document introduces loops in Python and discusses how iterative processes are handled in SQL, emphasizing the strengths and limitations of loops within each context.
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Week 6: Functions in Python and Stored Procedures in SQL
+
+In Week 6, we'll explore the use of functions in Python and stored procedures and functions in SQL. These constructs allow for modularizing code into reusable blocks, enhancing maintainability and scalability.
+
+## Section 1: Functions in Python
+
+Functions in Python are defined using the `def` keyword and can accept parameters and return values.
+
+### Defining and Calling Functions
+
+Here's how to define a simple function in Python that takes an argument and returns a value.
+
+```{python}
+# Python code chunk for defining and calling a function
+def greet(name):
+    return "Hello, " + name + "!"
+
+# Calling the function
+print(greet("Darrell"))
+```
+
+Parameters and Return Values Functions can have multiple parameters and return values. They can also return multiple values in the form of tuples.
+
+```{python eval=FALSE, include=TRUE}
+# Python code chunk for a function with multiple parameters and return values
+def arithmetic_operations(a, b):
+    return a+b, a-b, a*b, a/b
+
+# Calling the function and unpacking return values
+addition, subtraction, multiplication, division = arithmetic_operations(10, 5)
+print("Addition:", addition)
+print("Subtraction:", subtraction)
+print("Multiplication:", multiplication)
+print("Division:", division)
+
+```
+
+## Section 2: Stored Procedures and Functions in SQL
+
+Stored procedures and functions in SQL allow for encapsulating SQL queries and commands for reuse and execution.
+
+### Creating and Using a Stored Procedure
+
+Stored procedures can perform operations such as data manipulation and return the results.
+
+```{sql eval=FALSE, include=TRUE}
+-- SQL code chunk for creating and using a stored procedure (T-SQL syntax)
+CREATE PROCEDURE GetEmployeeInfo
+    @EmployeeID INT
+AS
+BEGIN
+    SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;
+END;
+GO
+
+-- Invoking the stored procedure
+EXEC GetEmployeeInfo @EmployeeID = 1;
+
+```
+
+### Creating and Using a Function in SQL
+
+Functions in SQL are used to compute values and cannot change the database state.
+
+```{sql eval=FALSE, include=TRUE}
+-- SQL code chunk for creating and using a function (T-SQL syntax)
+CREATE FUNCTION GetFullName (@FirstName VARCHAR(100), @LastName VARCHAR(100))
+RETURNS VARCHAR(200)
+AS
+BEGIN
+    RETURN @FirstName + ' ' + @LastName;
+END;
+GO
+
+-- Using the function in a SELECT statement
+SELECT dbo.GetFullName(FirstName, LastName) AS FullName FROM Employees;
+
+```
+
+### Exercises
+
+Create a Python function that calculates the factorial of a number and test it with different values. Write a Python function that checks whether a given word is a palindrome (reads the same backward and forward).
+
+In SQL, create a stored procedure that retrieves employees by their department ID and test it. Develop an SQL function that calculates the yearly salary increase based on current salary and percentage increase rate.
+
+### Conclusion
+
+Functions and stored procedures are crucial for writing clean, efficient, and reusable code. By encapsulating specific tasks into these constructs, you can simplify complex operations in both Python and SQL, making your code more organized and easier to maintain.
+
+This Week 6 document aims to introduce and solidify the understanding and usage of functions in Python and stored procedures and functions in SQL, through both explanation and hands-on practice with code examples.
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Week 7: Sequences, Data Structures, and Relational Models
+
+Week 7 dives into more complex types of data management: sequences and data structures in Python for organizing and manipulating data, and the relational data model in SQL that underpins how data is stored, accessed, and manipulated in databases.
+
+## Section 1: Sequences and Data Structures in Python
+
+Python offers a variety of data structures for efficiently storing and managing data. Let's explore lists, dictionaries, and sets.
+
+### Lists
+
+Lists in Python are ordered sequences that can hold a variety of object types. They support indexing, slicing, and a host of methods for manipulation.
+
+```{python}
+# Python code chunk for demonstrating lists
+my_list = [1, 2, 3, 4, 5]
+print(my_list[0])  # Accessing the first element
+my_list.append(6)  # Adding an element
+print(my_list)
+```
+
+### Dictionaries
+
+Dictionaries store key-value pairs and are ideal for fast lookup of values by key.
+
+```{python eval=FALSE, include=TRUE}
+# Python code chunk for demonstrating dictionaries
+my_dict = {'name': 'Darrell', 'age': 30}
+print(my_dict['name'])  # Accessing value by key
+my_dict['profession'] = 'Data Analyst'  # Adding a new key-value pair
+print(my_dict)
+
+```
+
+### Sets
+
+Sets are unordered collections of unique elements, useful for operations like union, intersection, and difference.
+
+```{python eval=FALSE, include=TRUE}
+# Python code chunk for demonstrating sets
+my_set = {1, 2, 3, 4, 5}
+print(my_set)
+my_set.add(6)  # Adding a new element
+print(my_set)
+
+```
+
+## Section 2: Relational Data Model and SQL Operations
+
+The relational data model organizes data into tables (relations) that relate to each other through foreign keys.
+
+### JOIN Operations
+
+JOIN operations in SQL allow for the combination of rows from two or more tables based on a related column between them.
+
+```{sql eval=FALSE, include=TRUE}
+-- SQL code chunk for demonstrating JOIN operations
+SELECT Employees.Name, Departments.Name
+FROM Employees
+JOIN Departments ON Employees.DepartmentID = Departments.ID;
+
+```
+
+### Subqueries
+
+Subqueries are queries within queries, useful for complex data retrieval.
+
+```{sql eval=FALSE, include=TRUE}
+-- SQL code chunk for demonstrating subqueries
+SELECT Name
+FROM Employees
+WHERE DepartmentID IN (SELECT ID FROM Departments WHERE Name = 'IT');
+
+```
+
+### Exercises
+
+1.  Create a Python script that uses lists to store the names of your favorite movies and then prints them out.
+2.  Write a Python program that uses dictionaries to store information about a book (title, author, year), then prints out the information.
+3.  Use sets in Python to find the common elements between two sets of numbers.
+4.  Write an SQL query using JOIN to retrieve employee names and their department names.
+5.  Craft an SQL query with a subquery to find all employees in a specific department based on the department name.
+
+### Conclusion
+
+Understanding and utilizing sequences and data structures in Python and grasping the relational data model and its operations in SQL are pivotal for managing complex data. These constructs enhance your ability to organize, access, and manipulate data effectively, serving as fundamental skills in both programming and database
+
+This Week 7 document is crafted to enhance the learner's ability to work with complex data structures in Python and understand relational database operations in SQL, bridging the gap between basic programming concepts and more advanced data manipulation techniques.
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Week 8: Integration and Project Work
+
+In Week 8, we culminate our learning journey by integrating the coding fundamentals we've explored into a comprehensive project. This project will involve developing a Python application that interfaces with a SQL database, showcasing the practical application of variables, control structures, functions, and data structures in Python, alongside database manipulation in SQL.
+
+## Project Objective
+
+The goal of this project is to create a Python application that performs CRUD (Create, Read, Update, Delete) operations on a SQL database. This application will serve as a demonstration of your ability to apply programming concepts in Python and SQL to solve real-world problems.
+
+### Project Requirements
+
+-   **Python Application**:
+    -   Use variables, loops, and conditional statements to navigate the program flow.
+    -   Implement functions to organize your code into logical blocks.
+    -   Utilize lists or dictionaries to manage data within the application.
+-   **SQL Database**:
+    -   Design a simple database schema with at least one table to store data.
+    -   Use SQL commands to create the table and define its structure.
+    -   Perform insert, select, update, and delete operations from your Python application.
+
+### Suggested Project Ideas
+
+1.  **Contact Book Application**: A simple application to store, retrieve, update, and delete contact information (e.g., name, phone number, email) in a database.
+2.  **Inventory Management System**: An application to manage products in an inventory, including adding new products, updating stock levels, retrieving product information, and deleting products from the inventory.
+
+## Implementation Guide
+
+### Setting Up the Database
+
+First, design your database schema and create your tables using SQL.
+
+```{sql eval=FALSE, include=TRUE}
+-- Example SQL code for creating a table
+CREATE TABLE Contacts (
+    ContactID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    PhoneNumber VARCHAR(15),
+    Email VARCHAR(100)
+);
+```
+
+## Developing the Python Application
+
+Outline the structure of your Python application, defining the functions needed for each operation.
+
+### Connecting to the Database
+
+Use a Python library such as sqlite3 or pyodbc to connect to your SQL database.
+
+```{python eval=FALSE, include=TRUE}
+# Python code chunk for connecting to a database
+import sqlite3
+
+# Connect to SQLite database (or change to connect to another database type)
+conn = sqlite3.connect('mydatabase.db')
+
+```
+
+### CRUD Operations
+
+Implement functions for each CRUD operation. For example, creating a new contact:
+
+```{python eval=FALSE, include=TRUE}
+# Python code chunk for inserting data into the database
+def add_contact(conn, contact_info):
+    sql = ''' INSERT INTO Contacts(Name, PhoneNumber, Email)
+              VALUES(?,?,?) '''
+    cur = conn.cursor()
+    cur.execute(sql, contact_info)
+    conn.commit()
+
+```
+
+### Exercises
+
+Plan the database schema for your project idea. What tables and fields will you need? Outline the Python functions you will implement to interact with the database. Begin coding your Python application, starting with the database connection and a simple interface for performing the CRUD operations.
+
+### Conclusion
+
+This final week's project is an opportunity to apply everything you've learned throughout this course. By building a Python application that interacts with a SQL database, you demonstrate not only your understanding of coding principles but also your ability to apply these concepts to create functional, real-world applications. Good luck, and have fun with your project!
+
+This Week 8 document is designed to guide you through the process of applying the coding fundamentals you've learned into a cohesive project, emphasizing the practical application of programming concepts in a real-world scenario.
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Closing thoughts
+
+You have read through this document as it exists today. At some point in the future, it may change if I learn new stuff and have the dopamine driving me to update this document. It is in my Technical_Documentation_By_DarrellWolfe repo in GitHub if you want to copy it into your system and make it your own with your own notes. <https://github.com/darrellwolfe/Technical_Documentation_By_DarrellWolfe>
+
+Close Git Link: <https://github.com/darrellwolfe/Technical_Documentation_By_DarrellWolfe.git>
+
+For now, I leave you with this...
+
+Practice makes better. Reading this will only help a little. Open up the tools, get to working. Practice things. If there is an error or something weird on this page, comment on the website or email [me\@darrellwolfe.com](mailto:me@darrellwolfe.com){.email}.
+
+```{python eval=TRUE, include=TRUE}
+print("You Got This!")
+```
+
+```{sql eval=FALSE, include=TRUE}
+
+#AuDHD
+
+Select
+ygt.You
+,ygt.Are
+,ygt.Awesome
+,ygt.capacity
+
+From YouGotThis AS ygt
+
+Where ygt.capacity LIKE '%Dopamine_Sufficient%'
+
+```
+
+Shalom! Namaste! TYL
+
+# The End... For Now...
