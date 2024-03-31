@@ -310,15 +310,11 @@ Most of what we are going to do, you can just use the W3 Schools code editor to 
 
 -   SQL: <https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all>
 
-
-
 ## Alternate Options
 
 If you are advanced already, you probably already use Visual Studio or RStudio or another coding program or code book. Feel free. I prefer RStudio, as it is way more user friendly. If you want to go that route, by all means, download RSTudio: <https://posit.co/download/rstudio-desktop/>. If you go this route, make sure to install R and RStudio (see the website for details).
 
-You can also clone your GitHub repos in RStudio. We can follow each other on GitHub: 
-https://github.com/darrellwolfe
-
+You can also clone your GitHub repos in RStudio. We can follow each other on GitHub: <https://github.com/darrellwolfe>
 
 ### PYTHON
 
@@ -346,8 +342,7 @@ One awesome tool that will let you actually use SQL is Google's [BigQuery (link)
 
 From their website: "BigQuery's serverless architecture lets you use SQL queries to analyze your data. You can store and analyze your data within BigQuery or use BigQuery to assess your data where it lives. To test how it works for yourself, query data---without a credit card---using the BigQuery sandbox."
 
-BigQuery Overview: https://cloud.google.com/bigquery/docs/introduction
-
+BigQuery Overview: <https://cloud.google.com/bigquery/docs/introduction>
 
 ## ---------------------------------------------------------------
 
@@ -357,9 +352,180 @@ BigQuery Overview: https://cloud.google.com/bigquery/docs/introduction
 
 This week, we begin our journey into the world of coding by exploring the concept of variables. We will look at how variables function in both Python and SQL, setting the foundation for more complex operations.
 
+Open the W3 schools links (or whatever program you've decided to use):
+
+-   Python: <https://www.w3schools.com/python/trypython.asp?filename=demo_default>
+
+-   SQL: <https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all>
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+
+## Data Types
+
+Before we can even start talking about variables, we need to level-set by discussing data types.
+
+Discussing data types is fundamental for understanding how information is stored and manipulated in programming languages. Data types specify the kind of data a variable can hold and determine what operations can be performed on it. Let's look at some common data types in Python and SQL, focusing on strings, integers, and others.
+
+### Python Data Types
+
+In Python, data types are dynamically inferred, which means you don't need to declare the type of a variable explicitly. Here are some of the basic types:
+
+-   int: Represents integer values. Example: age = 30
+
+-   float: Represents floating-point numbers or decimals. Example: height = 5.9
+
+-   str: Represents text or string data. Example: name = "Darrell"
+
+-   bool: Represents Boolean values (True or False). Example: is_student = False
+
+-   list: An ordered collection of items. Example: colors = ["red", "green", "blue"]
+
+-   dict: A collection of key-value pairs. Example: person = {"name": "Darrell", "age": 30}
+
+Python also supports other complex data types like tuples, sets, and custom classes.
+
+### SQL Data Types
+
+SQL data types need to be explicitly defined when creating or altering tables and when declaring variables in scripts or stored procedures. The exact data types available can vary between different SQL database systems, but here are some widely used types:
+
+-   INT: An integer numeric value. Example: EmployeeID INT (There is also BIGINT for larger numbers)
+
+-   VARCHAR(n) or CHAR(n): Variable-length and fixed-length character types for strings. VARCHAR is used for strings of varying lengths, and CHAR for strings of fixed length. Example: FirstName VARCHAR(50)
+
+-   FLOAT or DECIMAL: Used for floating-point numbers and decimals with precision. Example: Salary DECIMAL(10, 2)
+
+-   DATE, TIME, DATETIME: Represent dates, times, and both, respectively. Example: HireDate DATE
+
+-   BOOLEAN: Represents Boolean values, though some SQL systems use BIT, with 1 for true and 0 for false. Example: IsActive BOOLEAN
+
+### Key Points
+
+-   Data types are crucial for defining how data is stored and what operations can be performed on it.
+
+-   Python infers data types dynamically and supports a wide range of built-in types for various applications.
+
+-   SQL requires explicit declaration of data types, with some variation across different database systems, emphasizing the structured nature of data in databases.
+
+Understanding these data types and their appropriate use cases is essential for effective programming and data manipulation, enabling the development of more robust and error-free applications.
+
+But as you can see already by comparing just two languages, Python and SQL, the data types are widely crossover fro
+
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+
+## Understanding Variables in Python and SQL
+
+Now we need to talk about what variables are (using Python & SQL):
+
+
+Variables are essential in any programming or scripting language. They act as placeholders or containers for storing data values. In programming, variables enable us to write flexible and dynamic code, where we can manipulate data in various ways. Let's explore what variables are in the context of Python and SQL, two widely used languages in software development and database management.
+
 ## Section 1: Introduction to Python Variables
 
 Variables are fundamental in any programming language. They allow us to store information that can be reused throughout our programs. Let's start with Python.
+
+### Variables in Python
+
+In Python, a variable is created the moment you first assign a value to it. Variables do not need to be declared with any specific type, and they can even change type after they have been set.
+
+A variable is essentially a name that is used to refer to some memory location in the computer, where you can store data values. You can think of it as a box where you can store something for use later in your code. Python is dynamically typed, which means you don't explicitly declare the data type of a variable. The Python interpreter infers the type based on the value assigned to the variable.
+
+Here's a quick example:
+
+```{python eval=FALSE, include=TRUE}
+
+name = "Darrell"  # String variable
+age = 30  # Integer variable
+is_analyst = True  # Boolean variable
+```
+
+In these examples: - name, age, and is_analyst are variables. - "Darrell", 30, and True are the values stored in those variables.
+
+Python understands the type of data (string, integer, boolean) automatically.
+
+#### Creating and Using Variables
+
+```{python eval=TRUE, include=TRUE}
+
+# Assigning values to variables
+name = "Jimmy"  # A string variable
+age = 30  # An integer variable
+height = 6.7  # A floating-point variable
+
+# Using variables
+print(f"{name} is {age} years old and {height} feet tall.")
+```
+
+#### Characteristics of Python Variables:
+
+-   Dynamically Typed: You don't explicitly declare the data type of a variable. The Python interpreter infers the type based on the assigned value.
+
+-   Mutable: The value or type of a variable can change over time.
+
+### Variables in SQL
+
+SQL (Structured Query Language) variables are a bit different. They are used within the scope of SQL scripts, stored procedures, or queries to hold temporary data. In SQL, you typically need to declare a variable explicitly before using it, including specifying its data type.
+
+#### Declaring and Using Variables in SQL
+
+Here's how you might declare and use variables in an SQL environment (example in T-SQL, used by Microsoft SQL Server):
+
+```{sql eval=FALSE, include=TRUE}
+-- Declaring a variable
+DECLARE @EmployeeName VARCHAR(50);
+
+-- Assigning a value to the variable
+SET @EmployeeName = 'Jane Doe';
+
+-- Using the variable in a query
+SELECT * 
+
+FROM Employees 
+
+WHERE Name = @EmployeeName;
+
+```
+
+A more common example of a SQL variable I use when working with local government data is dates.
+
+```{sql eval=FALSE, include=TRUE}
+-- Declaring a variable
+DECLARE @TaxYear INT = '20240101';
+
+-- Using the variable in a query
+SELECT * 
+FROM CadasterValues 
+
+WHERE TaxYear = @TaxYear;
+```
+
+#### Characteristics of SQL Variables:
+
+-   Explicit Declaration: Variables must be declared before use, including specifying their data type. 
+-   Scoped: The visibility and lifetime of variables are usually limited to the batch, stored procedure, or script where they are declared. 
+-   Type-Specific: When declaring a variable, you must specify its data type.
+
+#### Conclusion
+
+Variables are a fundamental aspect of both programming and scripting languages, acting as the basic units for data storage and manipulation. While Python variables are versatile and dynamically typed, SQL variables require explicit declaration and are type-specific, reflecting the structured nature of database languages. Understanding how to effectively use variables in both Python and SQL is crucial for developing flexible, efficient, and dynamic applications and queries.
+
+
+
+## ---------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+
+### Practice Declaring Variables
+
+
+In the W3 Schools code editer, paste the following two import scripts and the first example of declaring a variable.
 
 ```{python eval=FALSE, include=TRUE}
 # Python setup for using Python in R Markdown
@@ -371,7 +537,7 @@ import numpy as np
 
 In Python, variables do not need explicit declaration to reserve memory space. The declaration happens automatically when you assign a value to a variable.
 
-```{python eval=FALSE, include=TRUE}
+```{python eval=TRUE, include=TRUE}
 # Assigning values to variables
 x = 5
 y = "Hello, World!"
@@ -383,12 +549,29 @@ print(y)
 
 Python has various data types including integers, float (decimal numbers), strings, and more. Python's flexibility allows you to reassign variables to different data types.
 
-```{python eval=FALSE, include=TRUE}
+```{python eval=TRUE, include=TRUE}
 # Reassigning variables to different types
 x = 5.5   # x is now a float
 print(x)
 y = True  # y is now a boolean
 print(y)
+```
+
+Now play with these and come up with some of your own examples, change them and see what happns. 
+
+
+```{python eval=TRUE, include=TRUE}
+# Assigning values to variables
+x = 100 * 5
+y = "You have GOT to be kidding me!"
+# There are 43,560 square feet in an acre, multiply the acres by this for the square feet
+# If I have 0.56 acres, how many square feet do I have?
+z = 0.56
+SqFt = z * 43560
+
+print(x)
+print(y)
+print(SqFt)
 ```
 
 ## Section 2: Introduction to SQL Variables
@@ -405,7 +588,9 @@ DECLARE @EmployeeID int;
 -- Assigning a value to the variable
 SET @EmployeeID = 1;
 -- Using the variable in a query
-SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;
+SELECT * 
+FROM Employees 
+WHERE EmployeeID = @EmployeeID;
 ```
 
 ### Variable Types
@@ -420,6 +605,71 @@ DECLARE @EmployeeName VARCHAR(50);
 SET @StartDate = '2021-01-01';
 SET @EmployeeName = 'John Doe';
 ```
+
+Now try this in W3 Schools
+
+```{sql eval=FALSE, include=TRUE}
+Select *
+From Customers;
+
+```
+
+### Note: The first column should not have a comma before, the rest do, and no comma after the last column. There are two ways to accomplish this.
+
+Most SQL examples and tutorials will show you comma after. This works, it is the standard way. But what if I want to delete the "Country" column? Then I have to also remember to remove the comma after "City". This isn't hard, but in long code it gets tedious as you play with the data. So I use the alternate method.
+
+```{sql eval=FALSE, include=TRUE}
+Select
+CustomerID, -- No comma before CustomerID
+CustomerName,
+ContactName,
+Address,
+City,
+Country -- Note how there is no comma here
+
+From Customers;
+
+```
+
+### Select alternate method:
+
+Notice how the actual comma is the same. No comma before CustomerID, no comma after Country. But in this structure, I can delete the country line without affecting the code performance or having to remember to alter commas. Trust me, wth lots of movement in your scripts, try this method.
+
+```{sql eval=FALSE, include=TRUE}
+Select
+CustomerID -- Still no comma before CustomerID
+,CustomerName
+,ContactName
+,Address
+,City
+,Country -- Note how there is  still no comma here
+
+From Customers;
+
+```
+
+
+
+Practice using a variable, though this didn't work in W3 Schools, you may have to use BigQuery or get another database access to practice SQL
+
+```{sql eval=FALSE, include=TRUE}
+
+DECLARE @ID VARCHAR(20) = '3';
+
+Select
+CustomerID
+,CustomerName
+,ContactName
+,Address
+,City
+,Country
+
+From Customers
+
+Where CustomerID = @ID;
+
+```
+
 
 ## Exercises
 

@@ -847,6 +847,7 @@ SQL queries to analyze your data. You can store and analyze your data
 within BigQuery or use BigQuery to assess your data where it lives. To
 test how it works for yourself, query data—without a credit card—using
 the BigQuery sandbox.”</p>
+<p>BigQuery Overview: <a href="https://cloud.google.com/bigquery/docs/introduction" class="uri">https://cloud.google.com/bigquery/docs/introduction</a></p>
 </div>
 </div>
 <div id="section-7" class="section level2">
@@ -859,14 +860,215 @@ the BigQuery sandbox.”</p>
 <p>This week, we begin our journey into the world of coding by exploring
 the concept of variables. We will look at how variables function in both
 Python and SQL, setting the foundation for more complex operations.</p>
+<p>Open the W3 schools links (or whatever program you’ve decided to
+use):</p>
+<ul>
+<li><p>Python: <a href="https://www.w3schools.com/python/trypython.asp?filename=demo_default" class="uri">https://www.w3schools.com/python/trypython.asp?filename=demo_default</a></p></li>
+<li><p>SQL: <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all" class="uri">https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all</a></p></li>
+</ul>
+<div id="section-8" class="section level2">
+<h2>—————————————————————</h2>
+<hr />
+</div>
+<div id="data-types" class="section level2">
+<h2>Data Types</h2>
+<p>Before we can even start talking about variables, we need to
+level-set by discussing data types.</p>
+<p>Discussing data types is fundamental for understanding how
+information is stored and manipulated in programming languages. Data
+types specify the kind of data a variable can hold and determine what
+operations can be performed on it. Let’s look at some common data types
+in Python and SQL, focusing on strings, integers, and others.</p>
+<div id="python-data-types" class="section level3">
+<h3>Python Data Types</h3>
+<p>In Python, data types are dynamically inferred, which means you don’t
+need to declare the type of a variable explicitly. Here are some of the
+basic types:</p>
+<ul>
+<li><p>int: Represents integer values. Example: age = 30</p></li>
+<li><p>float: Represents floating-point numbers or decimals. Example:
+height = 5.9</p></li>
+<li><p>str: Represents text or string data. Example: name =
+“Darrell”</p></li>
+<li><p>bool: Represents Boolean values (True or False). Example:
+is_student = False</p></li>
+<li><p>list: An ordered collection of items. Example: colors = [“red”,
+“green”, “blue”]</p></li>
+<li><p>dict: A collection of key-value pairs. Example: person = {“name”:
+“Darrell”, “age”: 30}</p></li>
+</ul>
+<p>Python also supports other complex data types like tuples, sets, and
+custom classes.</p>
+</div>
+<div id="sql-data-types" class="section level3">
+<h3>SQL Data Types</h3>
+<p>SQL data types need to be explicitly defined when creating or
+altering tables and when declaring variables in scripts or stored
+procedures. The exact data types available can vary between different
+SQL database systems, but here are some widely used types:</p>
+<ul>
+<li><p>INT: An integer numeric value. Example: EmployeeID INT (There is
+also BIGINT for larger numbers)</p></li>
+<li><p>VARCHAR(n) or CHAR(n): Variable-length and fixed-length character
+types for strings. VARCHAR is used for strings of varying lengths, and
+CHAR for strings of fixed length. Example: FirstName
+VARCHAR(50)</p></li>
+<li><p>FLOAT or DECIMAL: Used for floating-point numbers and decimals
+with precision. Example: Salary DECIMAL(10, 2)</p></li>
+<li><p>DATE, TIME, DATETIME: Represent dates, times, and both,
+respectively. Example: HireDate DATE</p></li>
+<li><p>BOOLEAN: Represents Boolean values, though some SQL systems use
+BIT, with 1 for true and 0 for false. Example: IsActive BOOLEAN</p></li>
+</ul>
+</div>
+<div id="key-points" class="section level3">
+<h3>Key Points</h3>
+<ul>
+<li><p>Data types are crucial for defining how data is stored and what
+operations can be performed on it.</p></li>
+<li><p>Python infers data types dynamically and supports a wide range of
+built-in types for various applications.</p></li>
+<li><p>SQL requires explicit declaration of data types, with some
+variation across different database systems, emphasizing the structured
+nature of data in databases.</p></li>
+</ul>
+<p>Understanding these data types and their appropriate use cases is
+essential for effective programming and data manipulation, enabling the
+development of more robust and error-free applications.</p>
+<p>But as you can see already by comparing just two languages, Python
+and SQL, the data types are widely crossover fro</p>
+</div>
+</div>
+<div id="section-9" class="section level2">
+<h2>—————————————————————</h2>
+<hr />
+</div>
+<div id="understanding-variables-in-python-and-sql" class="section level2">
+<h2>Understanding Variables in Python and SQL</h2>
+<p>Now we need to talk about what variables are (using Python &amp;
+SQL):</p>
+<p>Variables are essential in any programming or scripting language.
+They act as placeholders or containers for storing data values. In
+programming, variables enable us to write flexible and dynamic code,
+where we can manipulate data in various ways. Let’s explore what
+variables are in the context of Python and SQL, two widely used
+languages in software development and database management.</p>
+</div>
 <div id="section-1-introduction-to-python-variables" class="section level2">
 <h2>Section 1: Introduction to Python Variables</h2>
 <p>Variables are fundamental in any programming language. They allow us
 to store information that can be reused throughout our programs. Let’s
 start with Python.</p>
+<div id="variables-in-python" class="section level3">
+<h3>Variables in Python</h3>
+<p>In Python, a variable is created the moment you first assign a value
+to it. Variables do not need to be declared with any specific type, and
+they can even change type after they have been set.</p>
+<p>A variable is essentially a name that is used to refer to some memory
+location in the computer, where you can store data values. You can think
+of it as a box where you can store something for use later in your code.
+Python is dynamically typed, which means you don’t explicitly declare
+the data type of a variable. The Python interpreter infers the type
+based on the value assigned to the variable.</p>
+<p>Here’s a quick example:</p>
+<pre class="python"><code>name = &quot;Darrell&quot;  # String variable
+age = 30  # Integer variable
+is_analyst = True  # Boolean variable</code></pre>
+<p>In these examples: - name, age, and is_analyst are variables. -
+“Darrell”, 30, and True are the values stored in those variables.</p>
+<p>Python understands the type of data (string, integer, boolean)
+automatically.</p>
+<div id="creating-and-using-variables" class="section level4">
+<h4>Creating and Using Variables</h4>
+<pre class="python"><code># Assigning values to variables
+name = &quot;Jimmy&quot;  # A string variable
+age = 30  # An integer variable
+height = 6.7  # A floating-point variable
+
+# Using variables
+print(f&quot;{name} is {age} years old and {height} feet tall.&quot;)</code></pre>
+<pre><code>## Jimmy is 30 years old and 6.7 feet tall.</code></pre>
+</div>
+<div id="characteristics-of-python-variables" class="section level4">
+<h4>Characteristics of Python Variables:</h4>
+<ul>
+<li><p>Dynamically Typed: You don’t explicitly declare the data type of
+a variable. The Python interpreter infers the type based on the assigned
+value.</p></li>
+<li><p>Mutable: The value or type of a variable can change over
+time.</p></li>
+</ul>
+</div>
+</div>
+<div id="variables-in-sql" class="section level3">
+<h3>Variables in SQL</h3>
+<p>SQL (Structured Query Language) variables are a bit different. They
+are used within the scope of SQL scripts, stored procedures, or queries
+to hold temporary data. In SQL, you typically need to declare a variable
+explicitly before using it, including specifying its data type.</p>
+<div id="declaring-and-using-variables-in-sql" class="section level4">
+<h4>Declaring and Using Variables in SQL</h4>
+<p>Here’s how you might declare and use variables in an SQL environment
+(example in T-SQL, used by Microsoft SQL Server):</p>
+<pre class="sql"><code>-- Declaring a variable
+DECLARE @EmployeeName VARCHAR(50);
+
+-- Assigning a value to the variable
+SET @EmployeeName = &#39;Jane Doe&#39;;
+
+-- Using the variable in a query
+SELECT * 
+
+FROM Employees 
+
+WHERE Name = @EmployeeName;
+</code></pre>
+<p>A more common example of a SQL variable I use when working with local
+government data is dates.</p>
+<pre class="sql"><code>-- Declaring a variable
+DECLARE @TaxYear INT = &#39;20240101&#39;;
+
+-- Using the variable in a query
+SELECT * 
+FROM CadasterValues 
+
+WHERE TaxYear = @TaxYear;</code></pre>
+</div>
+<div id="characteristics-of-sql-variables" class="section level4">
+<h4>Characteristics of SQL Variables:</h4>
+<ul>
+<li>Explicit Declaration: Variables must be declared before use,
+including specifying their data type.</li>
+<li>Scoped: The visibility and lifetime of variables are usually limited
+to the batch, stored procedure, or script where they are declared.</li>
+<li>Type-Specific: When declaring a variable, you must specify its data
+type.</li>
+</ul>
+</div>
+<div id="conclusion-1" class="section level4">
+<h4>Conclusion</h4>
+<p>Variables are a fundamental aspect of both programming and scripting
+languages, acting as the basic units for data storage and manipulation.
+While Python variables are versatile and dynamically typed, SQL
+variables require explicit declaration and are type-specific, reflecting
+the structured nature of database languages. Understanding how to
+effectively use variables in both Python and SQL is crucial for
+developing flexible, efficient, and dynamic applications and
+queries.</p>
+</div>
+</div>
+</div>
+<div id="section-10" class="section level2">
+<h2>—————————————————————</h2>
+<hr />
+<div id="practice-declaring-variables" class="section level3">
+<h3>Practice Declaring Variables</h3>
+<p>In the W3 Schools code editer, paste the following two import scripts
+and the first example of declaring a variable.</p>
 <pre class="python"><code># Python setup for using Python in R Markdown
 import pandas as pd
 import numpy as np</code></pre>
+</div>
 <div id="declaring-variables" class="section level3">
 <h3>Declaring Variables</h3>
 <p>In Python, variables do not need explicit declaration to reserve
@@ -875,8 +1077,10 @@ value to a variable.</p>
 <pre class="python"><code># Assigning values to variables
 x = 5
 y = &quot;Hello, World!&quot;
-print(x)
-print(y)</code></pre>
+print(x)</code></pre>
+<pre><code>## 5</code></pre>
+<pre class="python"><code>print(y)</code></pre>
+<pre><code>## Hello, World!</code></pre>
 </div>
 <div id="variable-types" class="section level3">
 <h3>Variable Types</h3>
@@ -885,9 +1089,27 @@ numbers), strings, and more. Python’s flexibility allows you to reassign
 variables to different data types.</p>
 <pre class="python"><code># Reassigning variables to different types
 x = 5.5   # x is now a float
-print(x)
-y = True  # y is now a boolean
+print(x)</code></pre>
+<pre><code>## 5.5</code></pre>
+<pre class="python"><code>y = True  # y is now a boolean
 print(y)</code></pre>
+<pre><code>## True</code></pre>
+<p>Now play with these and come up with some of your own examples,
+change them and see what happns.</p>
+<pre class="python"><code># Assigning values to variables
+x = 100 * 5
+y = &quot;You have GOT to be kidding me!&quot;
+# There are 43,560 square feet in an acre, multiply the acres by this for the square feet
+# If I have 0.56 acres, how many square feet do I have?
+z = 0.56
+SqFt = z * 43560
+
+print(x)</code></pre>
+<pre><code>## 500</code></pre>
+<pre class="python"><code>print(y)</code></pre>
+<pre><code>## You have GOT to be kidding me!</code></pre>
+<pre class="python"><code>print(SqFt)</code></pre>
+<pre><code>## 24393.600000000002</code></pre>
 </div>
 </div>
 <div id="section-2-introduction-to-sql-variables" class="section level2">
@@ -904,7 +1126,9 @@ DECLARE @EmployeeID int;
 -- Assigning a value to the variable
 SET @EmployeeID = 1;
 -- Using the variable in a query
-SELECT * FROM Employees WHERE EmployeeID = @EmployeeID;</code></pre>
+SELECT * 
+FROM Employees 
+WHERE EmployeeID = @EmployeeID;</code></pre>
 </div>
 <div id="variable-types-1" class="section level3">
 <h3>Variable Types</h3>
@@ -917,6 +1141,66 @@ DECLARE @EmployeeName VARCHAR(50);
 -- Assigning values
 SET @StartDate = &#39;2021-01-01&#39;;
 SET @EmployeeName = &#39;John Doe&#39;;</code></pre>
+<p>Now try this in W3 Schools</p>
+<pre class="sql"><code>Select *
+From Customers;
+</code></pre>
+</div>
+<div id="note-the-first-column-should-not-have-a-comma-before-the-rest-do-and-no-comma-after-the-last-column.-there-are-two-ways-to-accomplish-this." class="section level3">
+<h3>Note: The first column should not have a comma before, the rest do,
+and no comma after the last column. There are two ways to accomplish
+this.</h3>
+<p>Most SQL examples and tutorials will show you comma after. This
+works, it is the standard way. But what if I want to delete the
+“Country” column? Then I have to also remember to remove the comma after
+“City”. This isn’t hard, but in long code it gets tedious as you play
+with the data. So I use the alternate method.</p>
+<pre class="sql"><code>Select
+CustomerID, -- No comma before CustomerID
+CustomerName,
+ContactName,
+Address,
+City,
+Country -- Note how there is no comma here
+
+From Customers;
+</code></pre>
+</div>
+<div id="select-alternate-method" class="section level3">
+<h3>Select alternate method:</h3>
+<p>Notice how the actual comma is the same. No comma before CustomerID,
+no comma after Country. But in this structure, I can delete the country
+line without affecting the code performance or having to remember to
+alter commas. Trust me, wth lots of movement in your scripts, try this
+method.</p>
+<pre class="sql"><code>Select
+CustomerID -- Still no comma before CustomerID
+,CustomerName
+,ContactName
+,Address
+,City
+,Country -- Note how there is  still no comma here
+
+From Customers;
+</code></pre>
+<p>Practice using a variable, though this didn’t work in W3 Schools, you
+may have to use BigQuery or get another database access to practice
+SQL</p>
+<pre class="sql"><code>
+DECLARE @ID VARCHAR(20) = &#39;3&#39;;
+
+Select
+CustomerID
+,CustomerName
+,ContactName
+,Address
+,City
+,Country
+
+From Customers
+
+Where CustomerID = @ID;
+</code></pre>
 </div>
 </div>
 <div id="exercises-7" class="section level2">
@@ -929,7 +1213,7 @@ prints a greeting message.</p></li>
 select records after this date from a table of your choice.</p></li>
 </ol>
 </div>
-<div id="conclusion-1" class="section level2">
+<div id="conclusion-2" class="section level2">
 <h2>Conclusion</h2>
 <p>Understanding variables is the first step in mastering programming.
 This week, we’ve seen how variables are used in both Python and SQL.
@@ -942,7 +1226,7 @@ environment would need to be configured to connect to a SQL database).
 Remember to adjust the SQL syntax according to the specific SQL dialect
 you’re using (the example uses T-SQL as an illustration).</p>
 </div>
-<div id="section-8" class="section level2">
+<div id="section-11" class="section level2">
 <h2>—————————————————————</h2>
 <hr />
 </div>
@@ -1028,7 +1312,7 @@ salary greater than $50,000 and have been with the company for more than
 5 years.</p></li>
 </ol>
 </div>
-<div id="conclusion-2" class="section level3">
+<div id="conclusion-3" class="section level3">
 <h3>Conclusion</h3>
 <p>Understanding and utilizing math and logic operations are fundamental
 in programming. This week, we’ve built on our foundational knowledge of
@@ -1041,7 +1325,7 @@ from basic variables to more complex expressions and data
 manipulation.</p>
 </div>
 </div>
-<div id="section-9" class="section level2">
+<div id="section-12" class="section level2">
 <h2>—————————————————————</h2>
 <hr />
 </div>
@@ -1112,7 +1396,7 @@ each line to the console.</p></li>
 choice, then write a query to retrieve this record.</p></li>
 </ol>
 </div>
-<div id="conclusion-3" class="section level2">
+<div id="conclusion-4" class="section level2">
 <h2>Conclusion</h2>
 <p>Interacting with the outside world through input and output
 operations in Python and manipulating data in SQL are crucial for
@@ -1124,7 +1408,7 @@ operations in Python and fundamental data manipulation techniques in
 SQL. It provides a hands-on approach with exercises designed to
 reinforce the concepts discussed.</p>
 </div>
-<div id="section-10" class="section level2">
+<div id="section-13" class="section level2">
 <h2>—————————————————————</h2>
 <hr />
 </div>
@@ -1203,7 +1487,7 @@ conditions and outputs a result based on these conditions.</li>
 employees by their salary ranges (e.g., Low, Medium, High).</li>
 </ol>
 </div>
-<div id="conclusion-4" class="section level2">
+<div id="conclusion-5" class="section level2">
 <h2>Conclusion</h2>
 <p>Conditional statements are fundamental to programming, enabling
 dynamic decision-making based on different conditions. By mastering
@@ -1214,7 +1498,7 @@ conditional logic in Python and SQL. It’s designed to build on the
 foundational skills taught in previous weeks, gradually increasing the
 learner’s ability to handle more complex programming tasks.</p>
 </div>
-<div id="section-11" class="section level2">
+<div id="section-14" class="section level2">
 <h2>—————————————————————</h2>
 <hr />
 </div>
@@ -1300,7 +1584,7 @@ to iterate over a table and select names. Reflect on why a set-based
 approach might be preferred.</li>
 </ol>
 </div>
-<div id="conclusion-5" class="section level3">
+<div id="conclusion-6" class="section level3">
 <h3>Conclusion</h3>
 <p>Loops in Python provide a straightforward way to execute code
 multiple times, essential for tasks that require repetition. In SQL,
@@ -1314,7 +1598,7 @@ iterative processes are handled in SQL, emphasizing the strengths and
 limitations of loops within each context.</p>
 </div>
 </div>
-<div id="section-12" class="section level2">
+<div id="section-15" class="section level2">
 <h2>—————————————————————</h2>
 <hr />
 </div>
@@ -1404,7 +1688,7 @@ department ID and test it. Develop an SQL function that calculates the
 yearly salary increase based on current salary and percentage increase
 rate.</p>
 </div>
-<div id="conclusion-6" class="section level3">
+<div id="conclusion-7" class="section level3">
 <h3>Conclusion</h3>
 <p>Functions and stored procedures are crucial for writing clean,
 efficient, and reusable code. By encapsulating specific tasks into these
@@ -1416,7 +1700,7 @@ SQL, through both explanation and hands-on practice with code
 examples.</p>
 </div>
 </div>
-<div id="section-13" class="section level2">
+<div id="section-16" class="section level2">
 <h2>—————————————————————</h2>
 <hr />
 </div>
@@ -1505,7 +1789,7 @@ department names.</li>
 specific department based on the department name.</li>
 </ol>
 </div>
-<div id="conclusion-7" class="section level3">
+<div id="conclusion-8" class="section level3">
 <h3>Conclusion</h3>
 <p>Understanding and utilizing sequences and data structures in Python
 and grasping the relational data model and its operations in SQL are
@@ -1518,7 +1802,7 @@ database operations in SQL, bridging the gap between basic programming
 concepts and more advanced data manipulation techniques.</p>
 </div>
 </div>
-<div id="section-14" class="section level2">
+<div id="section-17" class="section level2">
 <h2>—————————————————————</h2>
 <hr />
 </div>
@@ -1621,7 +1905,7 @@ interact with the database. Begin coding your Python application,
 starting with the database connection and a simple interface for
 performing the CRUD operations.</p>
 </div>
-<div id="conclusion-8" class="section level3">
+<div id="conclusion-9" class="section level3">
 <h3>Conclusion</h3>
 <p>This final week’s project is an opportunity to apply everything
 you’ve learned throughout this course. By building a Python application
@@ -1635,7 +1919,7 @@ emphasizing the practical application of programming concepts in a
 real-world scenario.</p>
 </div>
 </div>
-<div id="section-15" class="section level2">
+<div id="section-18" class="section level2">
 <h2>—————————————————————</h2>
 <hr />
 </div>
